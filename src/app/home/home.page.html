@@ -1,14 +1,64 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-title class="bg-light">
+        Ramu Tea Stall
+      </ion-title>
+  
+      <ion-buttons slot="secondary">
+        <ion-button><ion-icon name="cart"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="ion-padding">
+      <ion-list>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-</ion-content>
+        <!-- <ion-item *ngFor="let items in itemCart"></ion-item> -->
+        <ion-item>
+          <ion-label>Samosa</ion-label>
+          <ion-buttons>
+            <ion-button fill="solid" color="primary" (click)="addItem('samosa')"><ion-icon name="add"></ion-icon></ion-button>
+            <p style="margin: 0 10px;">{{itemCart.samosa}}</p>
+            <ion-button fill="solid" color="primary" (click)="removeItem('samosa')"><ion-icon name="remove"></ion-icon></ion-button>
+          </ion-buttons>
+        </ion-item>
+        <ion-item>
+          <ion-label>Maggi</ion-label>
+          <ion-buttons>
+              <ion-button fill="solid" color="primary" (click)="addItem('maggi')"><ion-icon name="add"></ion-icon></ion-button>
+              <p style="margin: 0 10px;">{{itemCart.maggi}}</p>
+              <ion-button fill="solid" color="primary" (click)="removeItem('maggi')"><ion-icon name="remove"></ion-icon></ion-button>
+            </ion-buttons>
+        </ion-item>
+        <ion-item>
+          <ion-label>Veg Puff</ion-label>
+          <ion-buttons>
+              <ion-button fill="solid" color="primary" (click)="addItem('vp')"><ion-icon name="add"></ion-icon></ion-button>
+              <p style="margin: 0 10px;">{{itemCart.vp}}</p>
+              <ion-button fill="solid" color="primary" (click)="removeItem('vp')"><ion-icon name="remove"></ion-icon></ion-button>
+            </ion-buttons>
+          </ion-item>
+        <ion-item>
+          <ion-label>Paneer Puff</ion-label>
+          <ion-buttons>
+              <ion-button fill="solid" color="primary" (click)="addItem('pp')"><ion-icon name="add"></ion-icon></ion-button>
+              <p style="margin: 0 10px;">{{itemCart.pp}}</p>
+              <ion-button fill="solid" color="primary" (click)="removeItem('pp')"><ion-icon name="remove"></ion-icon></ion-button>
+            </ion-buttons>
+          </ion-item>
+        <ion-item>
+          <ion-label>Veg Sandwich</ion-label>
+          <ion-buttons>
+              <ion-button fill="solid" color="primary" (click)="addItem('vs')"><ion-icon name="add"></ion-icon></ion-button>
+              <p style="margin: 0 10px;">{{itemCart.vs}}</p>
+              <ion-button fill="solid" color="primary" (click)="removeItem('vs')"><ion-icon name="remove"></ion-icon></ion-button>
+            </ion-buttons>
+          </ion-item>
+                      
+      </ion-list>
+  
+  
+    </div>
+  </ion-content>
+  
